@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <br><br>
+        <title>Client Information.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <center> <div>Client Information</div> </center>
+
+    <br><br>
+
+    <Center>
+
+        <table width="500" border="1"> 
+            <tr align="right"> 
+                <th>Variable Name</th> 
+                <th>Actual Data</th> 
+            <tr align="center"> 
+                <td>Client ID:  </td>
+		<td>100  </td>
+                <!-- <td><input type="text" size=25 name="txtClientId"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Forename:</td>
+		<td>John  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Surname:</td>
+		<td>Graham  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Gender:</td>
+		<td>Male  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Age:</td>
+		<td>100  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Address:</td>
+		<td>Ealing  </td>
+                <!-- <td><input type="text" size=25 name="txtClientAddress"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Client Contact Number:</td>
+		<td>111 </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Allocated Doctor:</td>
+		<td>Dr Feelgood  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+            <tr align="center"> 
+                <td>Room Number:</td>
+		<td>222  </td>
+                <!-- <td><input type="text" size=25 name="txtClientName"></td> -->
+            </tr>
+
+        </table>
+        <body>
+
+            </body>
+            </html>

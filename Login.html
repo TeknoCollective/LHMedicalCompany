@@ -1,0 +1,70 @@
+<! –– Login.html ––>
+<! –– THIS CLASS DEALS WITH THE LOGIN OF STAFF AND CLIENTS AT LH MEDICAL––>
+<! –– PASSWORDS ARE HARDCODED, DUE TO TIME CONSTRAINTS.––>
+<! –– CLIENT CREDENTIALS: USERNAME: admin PASSWORD: admin ––>
+<! –– STAFF CREDENTIALS: USERNAME: staff PASSWORD: staff ––>
+
+<html>
+
+    <head>
+
+        <! –– SETTING UP THE INTERFACE ––>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        <form name="loginForm" >
+
+            <center> <div>Login to LH Medical</div> </center>
+            <br><br><br><br>
+
+            <tr>
+                <td>Username:</td>
+                <td><input type="text" size=25 name="userid"></td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td><input type="Password" size=25 name="pwd"></td>
+            </tr>
+
+            <tr>
+                <td ><input type="Reset"></td>
+                <td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+            </tr>
+
+        </form>
+        <br><br><br><br>
+        <br><br><br><br>
+
+    <Center> <a href='http://localhost:8085/LHMedicalCompany/registration.html'><button>Register</button></a> </Center>
+
+    <script language="javascript">
+        function check(form)
+        {
+
+            if (form.userid.value == "admin" && form.pwd.value == "admin")
+
+            {
+                window.open('http://localhost:8085/LHMedicalCompany/Menu.html')
+
+            } else
+            {
+                if (form.userid.value == "staff" && form.pwd.value == "staff")
+                {
+                    window.open('http://localhost:8085/LHMedicalCompany/staffMenu.html')
+                } else
+                {
+                    alert("Error With Password Or Username!")
+                    {
+                        return false;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

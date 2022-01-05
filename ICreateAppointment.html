@@ -1,0 +1,89 @@
+<! –– ICreateAppointment.html ––>
+<! –– THIS CLASS DEALS WITH THE CREATION OF APPOINTMENT AT LH MEDICAL AND SAVES AS TXT––>
+
+<html>
+
+    <head>
+    <center> <div>Create Appointment</div> </center>
+    <br>
+    <center> <div>Enter ClientID, Forename, Surname, Age, Address, Contact. </div> </center>
+
+</head>
+
+<body>
+    
+    <! –– SETTING UP THE INTERFACE ––>
+    <table>
+        <tr>
+            <td colspan="3">
+                <textarea id="inputTextToSave" cols="100" rows="5"></textarea>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>Save As:</td>
+            <td><input id="inputFileNameToSaveAs"></input></td>
+            <td><button onclick="saveTextAsFile()">Save & Submit</button></td>
+        </tr>
+
+        <tr>
+            <td>Choose Appointment File:</td>
+            <td><input type="file" id="fileToLoad"></td>
+            <td><button onclick="loadFileAsText()">Load Appointment File</button><td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+<center> <a href='http://localhost:8085/LHMedicalCompany/Menu.html'><button>Main Menu</button></a> </center>
+
+<! –– THIS IS THE JS FUNCTION TO HANDLE EVENTS FOR THE TXT FILES.––>
+<script type="text/javascript">
+
+    function saveTextAsFile()
+
+    {
+        var textToSave = document.getElementById("inputTextToSave").value;
+        var textToSaveAsBlob = new Blob([textToSave], {type: "text/plain"});
+        var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+        var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+        alert("Appointment has been created.")
+
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        downloadLink.href = textToSaveAsURL;
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = "none";
+        document.body.appendChild(downloadLink);
+
+        downloadLink.click();
+    }
+
+    function destroyClickedElement(event)
+
+    {
+        document.body.removeChild(event.target);
+    }
+
+    function loadFileAsText()
+
+    {
+        var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+        var fileReader = new FileReader();
+        fileReader.onload = function (fileLoadedEvent)
+        {
+            var textFromFileLoaded = fileLoadedEvent.target.result;
+            document.getElementById("inputTextToSave").value = textFromFileLoaded;
+        };
+        fileReader.readAsText(fileToLoad, "UTF-8");
+    }
+
+</script>
+
+</body>
+
+</html>

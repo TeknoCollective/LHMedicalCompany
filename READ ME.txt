@@ -1,0 +1,38 @@
+                               READ ME 
+
+PROJECT NAME: LHMedicalCompany
+STUDENT NUMBER: 21421583
+STUDENT NAME: TARLYN-EDWARDS-HARRIS
+
+****************************************************************
+Passwords are hard coded due to time restraints of the project.*
+                                                               *
+Staff login                                                    *
+Username: Staff.                                               *
+Password: Staff.                                               *
+                                                               *
+Client Login                                                   *
+Username: admin.                                               *
+Password: admin.                                               *
+*******************************************************************************************************
+TO RUN...                                                                                             *
+1) Deploy the project in netbeans using Wildfly 10.1.0 (mentioned in lectures)                        *                   *
+2) Run the file login.html using Chrome browser. [http://localhost:8085/LHMedicalCompany/Login.html]  *
+3) Navigate the LH Medical system using graphical interface.                                          *          *
+4) Formatted HTML Patient information is located LHMedicalCompany\Datasources\Client Information      *
+    - Please open these txt files and look how they format nicely on client information               *
+                                                                                                      *
+*******************************************************************************************************
+There are two dashboards, one for client one for staff with different *
+access rights.                                                        *
+                                                                      *
+Client information is loaded via txt, csv or JSON. Simply click       *
+button and open the folder, under the folder included in the zip      *
+named Datasources/Client Information. Choose the Client you wish to   *
+view. and their information will be displayed in a nice HTML table.   *
+***********************************************************************
+
+Some of the code used was mentioned in lectures and sample projects (WebApplicationRest)   All of this project is my own work however, some research and code from the 
+                                                                                           web has been adapted and used in order to make this project.
+have been used in this project.
+
